@@ -1,0 +1,7 @@
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\Ex07-SimonSays\bin\Debug\Ex07-SimonSays.exe.config
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\Ex07-SimonSays\bin\Debug\Ex07-SimonSays.exe
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\Ex07-SimonSays\bin\Debug\Ex07-SimonSays.pdb
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\Ex07-SimonSays\obj\Debug\Ex07-SimonSays.csprojAssemblyReference.cache
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\Ex07-SimonSays\obj\Debug\Ex07-SimonSays.csproj.CoreCompileInputs.cache
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\Ex07-SimonSays\obj\Debug\Ex07-SimonSays.exe
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\Ex07-SimonSays\obj\Debug\Ex07-SimonSays.pdb

@@ -1,0 +1,17 @@
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\NumbersTest.dll
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\NumbersTest.pdb
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\Ex04-Numbers.exe
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\Ex04-Numbers.pdb
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\Ex04-Numbers.exe.config
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\obj\Debug\NumbersTest.csprojAssemblyReference.cache
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\obj\Debug\NumbersTest.csproj.CoreCompileInputs.cache
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\obj\Debug\NumbersTest.csproj.CopyComplete
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\obj\Debug\NumbersTest.dll
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\NumbersTest\obj\Debug\NumbersTest.pdb

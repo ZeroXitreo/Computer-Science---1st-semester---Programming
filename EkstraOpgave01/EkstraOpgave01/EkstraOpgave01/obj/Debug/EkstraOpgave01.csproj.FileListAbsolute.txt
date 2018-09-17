@@ -1,0 +1,7 @@
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\EkstraOpgave01\EkstraOpgave01\EkstraOpgave01\bin\Debug\EkstraOpgave01.exe.config
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\EkstraOpgave01\EkstraOpgave01\EkstraOpgave01\bin\Debug\EkstraOpgave01.exe
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\EkstraOpgave01\EkstraOpgave01\EkstraOpgave01\bin\Debug\EkstraOpgave01.pdb
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\EkstraOpgave01\EkstraOpgave01\EkstraOpgave01\obj\Debug\EkstraOpgave01.csprojAssemblyReference.cache
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\EkstraOpgave01\EkstraOpgave01\EkstraOpgave01\obj\Debug\EkstraOpgave01.csproj.CoreCompileInputs.cache
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\EkstraOpgave01\EkstraOpgave01\EkstraOpgave01\obj\Debug\EkstraOpgave01.exe
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\EkstraOpgave01\EkstraOpgave01\EkstraOpgave01\obj\Debug\EkstraOpgave01.pdb

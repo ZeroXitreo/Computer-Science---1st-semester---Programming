@@ -1,0 +1,5 @@
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\b\Ex07-SimonSays\bin\Debug\Ex07-SimonSays.exe.config
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\b\Ex07-SimonSays\bin\Debug\Ex07-SimonSays.exe
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\i\Ex07-SimonSays\Debug\Ex07-SimonSays.csproj.CoreCompileInputs.cache
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\i\Ex07-SimonSays\Debug\Ex07-SimonSays.csproj.CopyComplete
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\i\Ex07-SimonSays\Debug\Ex07-SimonSays.exe

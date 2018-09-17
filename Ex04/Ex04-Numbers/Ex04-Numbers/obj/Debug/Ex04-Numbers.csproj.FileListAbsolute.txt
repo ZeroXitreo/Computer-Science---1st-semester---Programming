@@ -1,0 +1,7 @@
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\Ex04-Numbers\bin\Debug\Ex04-Numbers.exe.config
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\Ex04-Numbers\bin\Debug\Ex04-Numbers.exe
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\Ex04-Numbers\bin\Debug\Ex04-Numbers.pdb
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\Ex04-Numbers\obj\Debug\Ex04-Numbers.csprojAssemblyReference.cache
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\Ex04-Numbers\obj\Debug\Ex04-Numbers.csproj.CoreCompileInputs.cache
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\Ex04-Numbers\obj\Debug\Ex04-Numbers.exe
+C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\Ex04-Numbers\obj\Debug\Ex04-Numbers.pdb

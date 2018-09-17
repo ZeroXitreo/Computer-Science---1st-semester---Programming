@@ -1,0 +1,9 @@
+C:\Users\ZeroXitreo\Desktop\Ex03-HelloUCL\Ex03-HelloUCL\obj\Debug\Ex03-HelloUCL.csprojAssemblyReference.cache
+C:\Users\ZeroXitreo\Desktop\Ex03-HelloUCL\Ex03-HelloUCL\obj\Debug\Ex03-HelloUCL.csproj.CoreCompileInputs.cache
+C:\Users\ZeroXitreo\Desktop\Ex03-HelloUCL\Ex03-HelloUCL\bin\Debug\Ex03-HelloUCL.exe.config
+C:\Users\ZeroXitreo\Desktop\Ex03-HelloUCL\Ex03-HelloUCL\bin\Debug\Ex03-HelloUCL.exe
+C:\Users\ZeroXitreo\Desktop\Ex03-HelloUCL\Ex03-HelloUCL\bin\Debug\Ex03-HelloUCL.pdb
+C:\Users\ZeroXitreo\Desktop\Ex03-HelloUCL\Ex03-HelloUCL\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\ZeroXitreo\Desktop\Ex03-HelloUCL\Ex03-HelloUCL\obj\Debug\Ex03-HelloUCL.csproj.CopyComplete
+C:\Users\ZeroXitreo\Desktop\Ex03-HelloUCL\Ex03-HelloUCL\obj\Debug\Ex03-HelloUCL.exe
+C:\Users\ZeroXitreo\Desktop\Ex03-HelloUCL\Ex03-HelloUCL\obj\Debug\Ex03-HelloUCL.pdb
