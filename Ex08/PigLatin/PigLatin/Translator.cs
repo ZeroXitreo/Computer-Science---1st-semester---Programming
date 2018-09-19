@@ -15,38 +15,27 @@ namespace PigLatin
         {
             language = language == null ? ENGLISH : language;
             string[] split = v.Split(' ');
-            string[] splitResult = new string[split.Length];
 
             for (int i = 0; i < split.Length; i++)
             {
                 string pushback = "";
-
-                // Updownlow
-                bool isUpper = false;
-                if(char.IsUpper(split[i][0]))
-                {
-                    isUpper = true;
-                }
+                
+                bool isUpper = char.IsUpper(split[i][0]) ? true : false;
                 split[i] = split[i].ToLower();
-                // That's how we go
-
 
                 for (int j = 0; j < split[i].Length; j++)
                 {
-                    if (!language.Contains(split[i][j]))
-                    {
-                        pushback += split[i][j];
-                    }
-                    else
+                    if (language.Contains(split[i][j]))
                     {
                         break;
                     }
+                    pushback += split[i][j];
                 }
-                splitResult[i] = split[i].Substring(pushback.Length) + pushback + "ay";
-                splitResult[i] = isUpper ? (char.ToUpper(splitResult[i][0]) + splitResult[i].Substring(1)) : splitResult[i];
+                split[i] = split[i].Substring(pushback.Length) + pushback + "ay";
+                split[i] = isUpper ? (char.ToUpper(split[i][0]) + split[i].Substring(1)) : split[i];
             }
 
-            return string.Join(" ", splitResult);
+            return string.Join(" ", split);
         }
     }
 }

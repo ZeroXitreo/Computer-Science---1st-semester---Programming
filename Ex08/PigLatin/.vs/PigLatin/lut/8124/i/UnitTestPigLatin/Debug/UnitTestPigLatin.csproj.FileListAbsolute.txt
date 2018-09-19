@@ -1,8 +1,0 @@
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\b\UnitTestPigLatin\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\b\UnitTestPigLatin\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\b\UnitTestPigLatin\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\b\UnitTestPigLatin\bin\Debug\UnitTestPigLatin.dll
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\i\UnitTestPigLatin\Debug\UnitTestPigLatin.csprojAssemblyReference.cache
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\i\UnitTestPigLatin\Debug\UnitTestPigLatin.csproj.CoreCompileInputs.cache
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\i\UnitTestPigLatin\Debug\UnitTestPigLatin.csproj.CopyComplete
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\i\UnitTestPigLatin\Debug\UnitTestPigLatin.dll
