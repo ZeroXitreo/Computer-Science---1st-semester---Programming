@@ -1,0 +1,7 @@
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\PigLatin\bin\Debug\PigLatin.exe.config
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\PigLatin\bin\Debug\PigLatin.exe
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\PigLatin\bin\Debug\PigLatin.pdb
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\PigLatin\obj\Debug\PigLatin.csprojAssemblyReference.cache
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\PigLatin\obj\Debug\PigLatin.csproj.CoreCompileInputs.cache
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\PigLatin\obj\Debug\PigLatin.exe
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\PigLatin\obj\Debug\PigLatin.pdb

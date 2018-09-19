@@ -1,0 +1,17 @@
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\UnitTestPigLatin.dll
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\UnitTestPigLatin.pdb
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\PigLatin.exe
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\PigLatin.pdb
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\PigLatin.exe.config
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\obj\Debug\UnitTestPigLatin.csprojAssemblyReference.cache
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\obj\Debug\UnitTestPigLatin.csproj.CoreCompileInputs.cache
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\obj\Debug\UnitTestPigLatin.csproj.CopyComplete
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\obj\Debug\UnitTestPigLatin.dll
+C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\UnitTestPigLatin\obj\Debug\UnitTestPigLatin.pdb
