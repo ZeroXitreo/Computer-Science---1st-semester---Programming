@@ -116,5 +116,11 @@ namespace UnitTestPigLatin
         {
             Assert.AreEqual("Ødray Ødgray edmay ødeflay", translator.Translate("Rød Grød med fløde", Translator.DANISH));
         }
+
+        [TestMethod]
+        public void TranslateDanishWithWeirdStart()
+        {
+            Assert.AreEqual("Ogay etday arvay etay æselay omsay øday altay øethay", translator.Translate("Og det var et æsel som ød alt høet", Translator.DANISH));
+        }
     }
 }

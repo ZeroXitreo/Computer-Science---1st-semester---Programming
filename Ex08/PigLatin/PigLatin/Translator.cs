@@ -11,10 +11,10 @@ namespace PigLatin
         public static readonly char[] ENGLISH = { 'a', 'e', 'i', 'o' };
         public static readonly char[] DANISH = { 'a', 'e', 'i', 'o', 'u', 'y', 'æ', 'ø', 'å' };
 
-        public string Translate(string v, char[] language = null)
+        public string Translate(string sentence, char[] language = null)
         {
-            language = language == null ? ENGLISH : language;
-            string[] split = v.Split(' ');
+            language = language ?? ENGLISH;
+            string[] split = sentence.Split(' ');
 
             for (int i = 0; i < split.Length; i++)
             {
