@@ -1,8 +1,0 @@
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\b\SimonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\b\SimonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\b\SimonTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\b\SimonTest\bin\Debug\SimonTest.dll
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\i\SimonTest\Debug\SimonTest.csprojAssemblyReference.cache
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\i\SimonTest\Debug\SimonTest.csproj.CoreCompileInputs.cache
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\i\SimonTest\Debug\SimonTest.csproj.CopyComplete
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex07\Ex07-SimonSays\.vs\Ex07-SimonSays\lut\0\i\SimonTest\Debug\SimonTest.dll

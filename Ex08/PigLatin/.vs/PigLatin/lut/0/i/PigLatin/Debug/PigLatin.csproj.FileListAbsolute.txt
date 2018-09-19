@@ -1,5 +1,0 @@
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\b\PigLatin\bin\Debug\PigLatin.exe.config
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\b\PigLatin\bin\Debug\PigLatin.exe
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\i\PigLatin\Debug\PigLatin.csproj.CoreCompileInputs.cache
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\i\PigLatin\Debug\PigLatin.csproj.CopyComplete
-C:\Users\ZeroXitreo\Documents\GitHub\Computer-Science---1st-semester---Programming\Ex08\PigLatin\.vs\PigLatin\lut\0\i\PigLatin\Debug\PigLatin.exe

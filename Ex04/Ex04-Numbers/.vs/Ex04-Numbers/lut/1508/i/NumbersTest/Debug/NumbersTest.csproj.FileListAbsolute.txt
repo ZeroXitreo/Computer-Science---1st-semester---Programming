@@ -1,8 +1,0 @@
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\.vs\Ex04-Numbers\lut\0\b\NumbersTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\.vs\Ex04-Numbers\lut\0\b\NumbersTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\.vs\Ex04-Numbers\lut\0\b\NumbersTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\.vs\Ex04-Numbers\lut\0\b\NumbersTest\bin\Debug\NumbersTest.dll
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\.vs\Ex04-Numbers\lut\0\i\NumbersTest\Debug\NumbersTest.csprojAssemblyReference.cache
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\.vs\Ex04-Numbers\lut\0\i\NumbersTest\Debug\NumbersTest.csproj.CoreCompileInputs.cache
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\.vs\Ex04-Numbers\lut\0\i\NumbersTest\Debug\NumbersTest.csproj.CopyComplete
-C:\Users\ZeroXitreo\Google Drive\Study\Datamatiker\1. semester\Programming\Ex04\Ex04-Numbers\.vs\Ex04-Numbers\lut\0\i\NumbersTest\Debug\NumbersTest.dll
