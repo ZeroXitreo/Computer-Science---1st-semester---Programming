@@ -89,5 +89,46 @@ namespace UnitTestProject1
             Assert.AreEqual(95.7, temp.Celsius);
         }
 
+
+        [TestMethod]
+        public void SynkCelsiusFromFahrenheit1()
+        {
+            Temperature temp = new Temperature();
+            temp.Fahrenheit = 32.0;
+
+            temp.SetCelsiusFromFahrenheit();
+            Assert.AreEqual(0.0, temp.Celsius);
+        }
+
+        [TestMethod]
+        public void SynkCelsiusFromFahrenheit2()
+        {
+            Temperature temp = new Temperature();
+            temp.Fahrenheit = 41.0;
+
+            temp.SetCelsiusFromFahrenheit();
+            Assert.AreEqual(5.0, temp.Celsius);
+        }
+
+        [TestMethod]
+        public void SynkFahrenheitFromCelsius1()
+        {
+            Temperature temp = new Temperature();
+            temp.Celsius = 0.0;
+
+            temp.SetFahrenheitFromCelsius();
+            Assert.AreEqual(32.0, temp.Fahrenheit);
+        }
+
+        [TestMethod]
+        public void SynkFahrenheitFromCelsius2()
+        {
+            Temperature temp = new Temperature();
+            temp.Celsius = 100.0;
+
+            temp.SetFahrenheitFromCelsius();
+            Assert.AreEqual(212.0, temp.Fahrenheit);
+        }
+
     }
 }

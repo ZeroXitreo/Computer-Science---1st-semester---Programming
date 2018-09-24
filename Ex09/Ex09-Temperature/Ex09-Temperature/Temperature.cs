@@ -10,5 +10,15 @@ namespace Ex09_Temperature
     {
         public double Fahrenheit;
         public double Celsius;
+
+        public void SetCelsiusFromFahrenheit()
+        {
+            Celsius = TemperatureUtil.FahrenheitToCelsius(Fahrenheit);
+        }
+
+        public void SetFahrenheitFromCelsius()
+        {
+            Fahrenheit = TemperatureUtil.CelsiusToFahrenheit(Celsius);
+        }
     }
 }
