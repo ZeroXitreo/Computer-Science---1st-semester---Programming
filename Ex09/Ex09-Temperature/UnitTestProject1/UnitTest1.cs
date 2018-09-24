@@ -50,5 +50,44 @@ namespace UnitTestProject1
         {
             Assert.AreEqual(68, TemperatureUtil.CelsiusToFahrenheit(20));
         }
+
+
+        //Properties
+        [TestMethod]
+        public void CanSaveDataInFahrenheitProperty()
+        {
+            Temperature temp = new Temperature();
+            temp.Fahrenheit = 32.0;
+            Assert.AreEqual(32.0, temp.Fahrenheit);
+        }
+
+        [TestMethod]
+        public void CanChangeDataInFarenheitProperty()
+        {
+            Temperature temp = new Temperature();
+            temp.Fahrenheit = 45.9;
+            Assert.AreEqual(45.9, temp.Fahrenheit);
+            temp.Fahrenheit = 33.3;
+            Assert.AreEqual(33.3, temp.Fahrenheit);
+        }
+
+        [TestMethod]
+        public void CanSaveDataInCelsiusProperty()
+        {
+            Temperature temp = new Temperature();
+            temp.Celsius = 0.0;
+            Assert.AreEqual(0.0, temp.Celsius);
+        }
+
+        [TestMethod]
+        public void CanChangeDataInCelsiusProperty()
+        {
+            Temperature temp = new Temperature();
+            temp.Celsius = 0.0;
+            Assert.AreEqual(0, temp.Celsius);
+            temp.Celsius = 95.7;
+            Assert.AreEqual(95.7, temp.Celsius);
+        }
+
     }
 }
