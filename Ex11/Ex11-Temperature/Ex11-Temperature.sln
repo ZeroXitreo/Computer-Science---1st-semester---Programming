@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex11-Temperature", "Ex11-Temperature\Ex11-Temperature.csproj", "{8F3F3A08-2AE8-4D0E-89E8-3FAEA42C6C12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F3F3A08-2AE8-4D0E-89E8-3FAEA42C6C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3F3A08-2AE8-4D0E-89E8-3FAEA42C6C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3F3A08-2AE8-4D0E-89E8-3FAEA42C6C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3F3A08-2AE8-4D0E-89E8-3FAEA42C6C12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBA2149F-DC77-4816-94B3-FACE385D8B73}
+	EndGlobalSection
+EndGlobal
