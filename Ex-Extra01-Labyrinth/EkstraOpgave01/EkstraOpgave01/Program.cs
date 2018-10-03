@@ -10,8 +10,7 @@ namespace EkstraOpgave01
     {
         static void Main(string[] args)
         {
-            //int size = RequestInt("What size would you like the labyrinth to be ?");
-            int size = 30;
+            int size = RequestInt("What size would you like the labyrinth to be ?");
             Labyrinth lab = new Labyrinth(size);
 
             //lab.Start = RequestCoordinates(size, "Where would you like to start?");
