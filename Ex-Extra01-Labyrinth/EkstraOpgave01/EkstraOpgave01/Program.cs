@@ -11,19 +11,19 @@ namespace EkstraOpgave01
         static void Main(string[] args)
         {
             //int size = RequestInt("What size would you like the labyrinth to be ?");
-            int size = 11;
+            int size = 30;
             Labyrinth lab = new Labyrinth(size);
 
             //lab.Start = RequestCoordinates(size, "Where would you like to start?");
             //lab.Finish = RequestCoordinates(size, "Where would you like to finish?");
-            int[] Start = new int[] {0, 0};
-            int[] Finish = new int[] {(size / 2) - 1, size - 1};
+            int[] Start = new int[] {1, 0};
+            int[] Finish = new int[] { size - 2, size - 1};
 
             lab.GeneratePath(Start, Finish);
             lab.Print();
             Console.ReadKey();
 
-            lab.GeneratePath(new int[] {size - 1, 0});
+            lab.Fill();
             lab.Print();
             Console.ReadKey();
         }
