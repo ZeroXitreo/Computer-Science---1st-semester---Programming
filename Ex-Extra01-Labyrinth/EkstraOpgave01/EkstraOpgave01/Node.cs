@@ -10,13 +10,5 @@ namespace EkstraOpgave01
     {
         public int X;
         public int Y;
-        public enum Classification
-        {
-            Opened,
-            Closed,
-            Start,
-            Finish
-        }
-        public Classification Role = Classification.Opened;
     }
 }
