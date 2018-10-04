@@ -13,6 +13,9 @@ namespace EkstraOpgave01
             int size = 10;
             Labyrinth lab = new Labyrinth(size);
 
+
+
+
             lab.GeneratePath(lab.Grid[0, 0], lab.Grid[size - 1, size - 1]);
             lab.Print();
             Console.ReadKey();
