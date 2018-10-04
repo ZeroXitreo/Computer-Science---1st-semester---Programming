@@ -9,176 +9,205 @@ namespace EkstraOpgave01
 {
     class Labyrinth
     {
-        private bool[,] Grid;
-        private List<int[]> Path;
+        public Node[,] Grid;
+        public List<Node> AvailableNodes = new List<Node>();
+        public List<List<Node>> PathsTaken = new List<List<Node>>();
+        private readonly Random rnd = new Random();
 
         public Labyrinth(int size)
         {
-            Grid = new bool[size, size];
+            Grid = new Node[size, size];
+
+            // Set their positions
+            for (int y = 0; y < Grid.GetLength(1); y++)
+            {
+                for (int x = 0; x < Grid.GetLength(0); x++)
+                {
+                    Node node = new Node();
+                    AvailableNodes.Add(node);
+                    Grid[x, y] = node;
+                    node.X = x;
+                    node.Y = y;
+                }
+            }
+        }
+        public void Fill()
+        {
+            if (PathsTaken.Count > 0)
+            {
+                while (AvailableNodes.Count > 0)
+                {
+                    GeneratePath(AvailableNodes[rnd.Next(0, AvailableNodes.Count)]);
+                }
+            }
         }
 
-        public void GeneratePath(int[] start, int[] finish = null)
+        public void GeneratePath(Node start, Node finish = null)
         {
-            Random rnd = new Random();
-            Path = new List<int[]>();
-            Path.Add(start);
+            List<Node> path = new List<Node>();
+            path.Add(start);
 
-            while (finish == null || !Path.Any(p => p.SequenceEqual(finish)))
+            while (path.Last() != finish)
             {
-                // Check all 4 blocks around
-                List<int[]> availablePath = AvailableSteps();
+                List<Node> neighbours = GetNeighbours(path.Last());
 
-                if (finish == null)
+                Node nextNode = neighbours[rnd.Next(0, neighbours.Count)];
+
+                if (path.Any(p => p == nextNode)) // is the next step a part of the current path?
                 {
-                    bool found = false;
-                    foreach (int[] coord in availablePath)
-                    {
-                        if (Grid[coord[0], coord[1]])
-                        {
-                            Console.Write("Gotcha!");
-                            found = true;
-                        }
-                    }
-                    if (found)
-                    {
-                        break;
-                    }
-                }
-
-                // Next step
-                int[] nextStep = availablePath[rnd.Next(0, availablePath.Count)];
-
-                if (Path.Any(p => p.SequenceEqual(nextStep))) // is the next step a part of the current path?
-                {
-                    int index = Path.FindIndex(p => p[0] == nextStep[0] && p[1] == nextStep[1]);
-                    Path = Path.GetRange(0, index + 1);
+                    int index = path.FindIndex(p => p == nextNode);
+                    path = path.GetRange(0, index + 1);
                 }
                 else
                 {
-                    Path.Add(nextStep);
+                    path.Add(nextNode);
                 }
 
-                List<int[]> pathsNextToLastStep = PathsNextToLastStep();
-                if (pathsNextToLastStep.Count > 1) // is it next to more than 1?
+                if (finish == null && PathsTaken.Exists(p => p.Exists(q => q == path.Last())))
                 {
-                    int[] currentPos = Path.Last();
-                    int lowestIndex = Path.Count - 1;
-
-                    foreach (int[] coord in pathsNextToLastStep)
-                    {
-                        int index = Path.IndexOf(coord);
-                        if(index < lowestIndex)
-                        {
-                            lowestIndex = index;
-                        }
-                    }
-                    
-                    Path = Path.GetRange(0, lowestIndex + 1);
-                    Path.Add(currentPos);
+                    break;
                 }
             }
-            Print();
-            Console.ReadKey();
-            foreach (int[] step in Path)
+
+            foreach (Node node in path)
             {
-                Grid[step[0], step[1]] = true;
+                AvailableNodes.Remove(node);
             }
+
+            PathsTaken.Add(path);
         }
 
-        private List<int[]> AvailableSteps()
+        public List<Node> GetNeighbours(Node spot)
         {
-            List<int[]> availablePath = new List<int[]>();
+            List<Node> neighbours = new List<Node>();
 
             for (int y = -1; y <= 1; y++)
             {
                 for (int x = -1; x <= 1; x++)
                 {
-                    if (x == 0 && y == 0) // Center
+                    try
                     {
-                        continue;
-                    }
-                    else if (Math.Abs(x) == Math.Abs(y)) // Corner
-                    {
-                        continue;
-                    }
-                    else // Side
-                    {
-                        try
+                        int xCoords = spot.X + x;
+                        int yCoords = spot.Y + y;
+
+                        if (x == 0 && y == 0) // Center
                         {
-                            int xCoords = Path.Last()[0] + x;
-                            int yCoords = Path.Last()[1] + y;
-                            if (xCoords >= 0 && xCoords < Grid.GetLength(0) && yCoords >= 0 && yCoords < Grid.GetLength(1))
-                            {
-                                availablePath.Add(new int[] { xCoords, yCoords });
-                            }
+                            continue;
                         }
-                        catch (IndexOutOfRangeException)
+                        else if (Math.Abs(x) == Math.Abs(y)) // Corner
                         {
-                            // out of bounce
+                            continue;
                         }
+                        else // Side
+                        {
+                            neighbours.Add(Grid[xCoords, yCoords]);
+                        }
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        // out of bounce
                     }
                 }
             }
 
-
-            return availablePath;
+            return neighbours;
         }
-        private List<int[]> PathsNextToLastStep()
+        public List<Node> GetEdge(Node spot)
         {
-            List<int[]> pathsNextToStep = new List<int[]>();
+            List<Node> edge = new List<Node>();
 
             for (int y = -1; y <= 1; y++)
             {
                 for (int x = -1; x <= 1; x++)
                 {
-                    if (x == 0 && y == 0) // Center
+                    int xCoords = spot.X + x;
+                    int yCoords = spot.Y + y;
+                    try
                     {
-                        continue;
-                    }
-                    else if (Math.Abs(x) == Math.Abs(y)) // Corner
-                    {
-                        continue;
-                    }
-                    else // Side
-                    {
-                        try
+                        if (x == 0 && y == 0) // Center
                         {
-                            int[] last = Path.Last();
-                            if (Path.Any(p => p[0] == last[0] + x && p[1] == last[1] + y))
-                            {
-                                pathsNextToStep.Add(Path.Find(p => p[0] == last[0] + x && p[1] == last[1] + y));
-                            }
+                            continue;
                         }
-                        catch (IndexOutOfRangeException)
+                        else if (Math.Abs(x) == Math.Abs(y)) // Corner
                         {
-                            // out of bounce
+                            continue;
                         }
+                        else // Side
+                        {
+                            Node v = Grid[xCoords, yCoords];
+                        }
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        // out of bounce
+                        Node node = new Node();
+                        node.X = xCoords;
+                        node.Y = yCoords;
+                        edge.Add(node);
                     }
                 }
             }
 
-            return pathsNextToStep;
+            return edge;
         }
 
         public void Print()
         {
             Console.Clear();
-            for (int i = 0; i < Grid.GetLength(1); i++)
+
+            bool[,] walls = new bool[Grid.GetLength(0) * 2 + 1, Grid.GetLength(1) * 2 + 1];
+
+            foreach (List<Node> path in PathsTaken)
             {
-                for (int j = 0; j < Grid.GetLength(0); j++)
+                for (int i = 0; i < path.Count; i++)
                 {
-                    Console.BackgroundColor = ConsoleColor.White;
-                    if (Grid[j, i])
+                    Node node = path[i];
+
+                    walls[node.X * 2 + 1, node.Y * 2 + 1] = true;
+
+                    if (node == path.Last())
                     {
-                        Console.BackgroundColor = ConsoleColor.DarkGray;
+                        continue;
                     }
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.Write(Path.Exists(p => p[0] == j && p[1] == i) ? "X" : " ");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.BackgroundColor = ConsoleColor.Black;
+
+                    // Path
+                    Node nextNode = path[i + 1];
+                    walls[node.X + nextNode.X + 1, node.Y + nextNode.Y + 1] = true;
+
+                }
+            }
+
+            if (PathsTaken.Count > 0)
+            {
+                Node start = PathsTaken[0][0];
+                List<Node> startEdge = GetEdge(start);
+                Node preStart = startEdge[rnd.Next(0, startEdge.Count)];
+                walls[start.X + preStart.X + 1, start.Y + preStart.Y + 1] = true;
+
+                Node finish = PathsTaken[0].Last();
+                List<Node> finishEdge = GetEdge(finish);
+                Node preFinish = finishEdge[rnd.Next(0, finishEdge.Count)];
+                walls[finish.X + preFinish.X + 1, finish.Y + preFinish.Y + 1] = true;
+            }
+            
+            for (int y = 0; y < walls.GetLength(1); y++)
+            {
+                for (int x = 0; x < walls.GetLength(0); x++)
+                {
+                    //if (PathsTaken.Exists(p => p.Exists(q => q.X == x && q.Y == y)))
+                    if (walls[x, y])
+                    {
+                        Console.BackgroundColor = ConsoleColor.White;
+                    }
+                    else
+                    {
+                        Console.BackgroundColor = ConsoleColor.Black;
+                    }
+                    Console.Write("  ");
                 }
                 Console.WriteLine();
             }
+            Console.BackgroundColor = ConsoleColor.Black;
         }
     }
 }
