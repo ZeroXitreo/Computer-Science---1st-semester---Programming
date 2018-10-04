@@ -9,14 +9,19 @@ namespace EkstraOpgave01
 {
     class Labyrinth
     {
-        public Node[,] Grid;
-        public List<Node> AvailableNodes = new List<Node>();
-        public List<List<Node>> PathsTaken = new List<List<Node>>();
+        public Node[,] Grid { get; private set; }
+        private List<Node> AvailableNodes = new List<Node>();
+        private List<List<Node>> PathsTaken = new List<List<Node>>();
         private readonly Random rnd = new Random();
 
-        public Labyrinth(int size)
+        public Labyrinth(int sizeX, int sizeY = -1)
         {
-            Grid = new Node[size, size];
+            if (sizeY <= 0)
+            {
+                sizeY = sizeX;
+            }
+
+            Grid = new Node[sizeX, sizeY];
 
             // Set their positions
             for (int y = 0; y < Grid.GetLength(1); y++)
@@ -77,43 +82,9 @@ namespace EkstraOpgave01
             PathsTaken.Add(path);
         }
 
-        public List<Node> GetNeighbours(Node spot)
+        public List<Node> GetNeighbours(Node spot, bool reversed = true)
         {
             List<Node> neighbours = new List<Node>();
-
-            for (int y = -1; y <= 1; y++)
-            {
-                for (int x = -1; x <= 1; x++)
-                {
-                    try
-                    {
-                        int xCoords = spot.X + x;
-                        int yCoords = spot.Y + y;
-
-                        if (x == 0 && y == 0) // Center
-                        {
-                            continue;
-                        }
-                        else if (Math.Abs(x) == Math.Abs(y)) // Corner
-                        {
-                            continue;
-                        }
-                        else // Side
-                        {
-                            neighbours.Add(Grid[xCoords, yCoords]);
-                        }
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        // out of bounce
-                    }
-                }
-            }
-
-            return neighbours;
-        }
-        public List<Node> GetEdge(Node spot)
-        {
             List<Node> edge = new List<Node>();
 
             for (int y = -1; y <= 1; y++)
@@ -134,7 +105,7 @@ namespace EkstraOpgave01
                         }
                         else // Side
                         {
-                            Node v = Grid[xCoords, yCoords];
+                            neighbours.Add(Grid[xCoords, yCoords]);
                         }
                     }
                     catch (IndexOutOfRangeException)
@@ -148,7 +119,7 @@ namespace EkstraOpgave01
                 }
             }
 
-            return edge;
+            return reversed ? neighbours : edge;
         }
 
         public void Print()
@@ -180,12 +151,12 @@ namespace EkstraOpgave01
             if (PathsTaken.Count > 0)
             {
                 Node start = PathsTaken[0][0];
-                List<Node> startEdge = GetEdge(start);
+                List<Node> startEdge = GetNeighbours(start, false);
                 Node preStart = startEdge[rnd.Next(0, startEdge.Count)];
                 walls[start.X + preStart.X + 1, start.Y + preStart.Y + 1] = true;
 
                 Node finish = PathsTaken[0].Last();
-                List<Node> finishEdge = GetEdge(finish);
+                List<Node> finishEdge = GetNeighbours(finish, false);
                 Node preFinish = finishEdge[rnd.Next(0, finishEdge.Count)];
                 walls[finish.X + preFinish.X + 1, finish.Y + preFinish.Y + 1] = true;
             }
@@ -201,7 +172,7 @@ namespace EkstraOpgave01
                     }
                     else
                     {
-                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.BackgroundColor = ConsoleColor.DarkGray;
                     }
                     Console.Write("  ");
                 }
