@@ -11,10 +11,10 @@ namespace Ex12_Timer
         override
         public string ToString()
         {
-            int seconds = Seconds % 60;
-            int minutes = Seconds / 60 % 60;
-            int hours = Seconds / 60 / 60 % 60;
-            return string.Format("{2:00}:{1:00}:{0:00}", seconds, minutes, hours);
+            string seconds = Padded(Seconds % 60);
+            string minutes = Padded(Seconds / 60 % 60);
+            string hours = Padded(Seconds / 60 / 60 % 60);
+            return hours + ":" + minutes + ":" + seconds;
         }
 
         public string Padded(int v)
