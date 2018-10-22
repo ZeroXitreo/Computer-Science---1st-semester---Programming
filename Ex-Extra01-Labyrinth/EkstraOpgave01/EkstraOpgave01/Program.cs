@@ -10,13 +10,13 @@ namespace EkstraOpgave01
     {
         static void Main(string[] args)
         {
-            int size = 10;
-            Labyrinth lab = new Labyrinth(size);
+            int size = 200;
+            Labyrinth lab = new Labyrinth(size, size/2);
 
 
 
 
-            lab.GeneratePath(lab.Grid[0, 0], lab.Grid[size - 1, size - 1]);
+            lab.GeneratePath(lab.Grid[0, 0], lab.Grid[size - 1, size/2 - 1]);
             lab.Print();
             Console.ReadKey();
 
