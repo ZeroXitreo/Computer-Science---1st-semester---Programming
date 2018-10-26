@@ -8,7 +8,8 @@ namespace EkstraOpgave01
 {
     class Node
     {
-        public int X;
-        public int Y;
+        internal int X;
+        internal int Y;
+        internal List<Node> neighbours = new List<Node>();
     }
 }

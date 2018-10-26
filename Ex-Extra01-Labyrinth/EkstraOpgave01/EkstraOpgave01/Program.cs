@@ -10,7 +10,7 @@ namespace EkstraOpgave01
     {
         static void Main(string[] args)
         {
-            int size = 200;
+            int size = 20;
             Labyrinth lab = new Labyrinth(size, size/2);
 
 
@@ -39,12 +39,10 @@ namespace EkstraOpgave01
                 if (inputSplit.Length != 2) // Are there more or less than two indexes?
                 {
                     Console.WriteLine("Not two coordinates!");
-                    completed = false;
                 }
                 else if (!int.TryParse(inputSplit[0], out output[0]) || !int.TryParse(inputSplit[1], out output[1])) // Can they not be parsed as numbers?
                 {
                     Console.WriteLine("Either or both are not a number!");
-                    completed = false;
                 }
                 else if (output[0] >= 0 && output[0] < size && output[1] >= 0 && output[1] < size) // is not an end point of the labyrinth?
                 {
@@ -53,7 +51,6 @@ namespace EkstraOpgave01
                 else
                 {
                     Console.WriteLine("Doesn't hit an end of the labyrinth!");
-                    completed = false;
                 }
             }
             return output;
