@@ -148,7 +148,8 @@ namespace EkstraOpgave01
                 }
             }
 
-            if (PathsTaken.Count > 0)
+            // TO DO: Make this better because if the labyrinth start or finish isn't part of the end, it'll throw an exception.
+            if (PathsTaken.Count > 0 && false)
             {
                 Node start = PathsTaken[0][0];
                 List<Node> startEdge = GetNeighbours(start, false);
