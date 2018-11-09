@@ -1,0 +1,53 @@
+DROP TABLE IF EXISTS SEMINAR_CUSTOMER;
+DROP TABLE IF EXISTS CUSTOMER;
+DROP TABLE IF EXISTS ZIP_CITY;
+DROP TABLE IF EXISTS SEMINAR;
+
+
+
+CREATE TABLE ZIP_CITY
+(
+	Zip					int				primary key
+	,City				varchar(50)		NOT NULL
+);
+
+CREATE TABLE CUSTOMER
+(
+	CustomerID			int				primary key
+	,FirstName			varchar(50)		NOT NULL
+	,LastName			varchar(50)		NOT NULL
+	,Street				varchar(100)	NOT NULL
+	,Zip				int				NOT NULL
+
+	,CONSTRAINT FK_ZIP_CITY FOREIGN KEY (Zip)
+		REFERENCES ZIP_CITY (Zip)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+);
+
+CREATE TABLE SEMINAR
+(
+	SeminarID			int				primary key
+	,SeminarDate		datetime		NOT NULL
+	,Location			varchar(100)	NOT NULL
+	,SeminarTitle		varchar(50)		NOT NULL
+);
+
+
+CREATE TABLE SEMINAR_CUSTOMER
+(
+	SeminarID			int				NOT NULL
+	,CustomerID			int				NOT NULL
+
+	,primary key (SeminarID, CustomerID)
+
+	,CONSTRAINT FK_SEMINAR FOREIGN KEY (SeminarID)
+		REFERENCES SEMINAR (SeminarID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+
+	,CONSTRAINT FK_CUSTOMER FOREIGN KEY (CustomerID)
+		REFERENCES CUSTOMER (CustomerID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+);
