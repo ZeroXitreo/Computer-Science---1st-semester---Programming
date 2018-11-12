@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS PET_OWNER
 
 CREATE TABLE PET_OWNER
 (
-	OwnerId				int				primary key
+	OwnerId				int				NOT NULL IDENTITY(1,1) primary key
 	,OwnerLastName		varchar(50)		NOT NULL
 	,OwnerFirstName		varchar(50)		NOT NULL
 	,OwnerPhone			varchar(12)
@@ -14,11 +14,11 @@ CREATE TABLE PET_OWNER
 
 CREATE TABLE PET
 (
-	PetID				int				primary key
+	PetID				int				NOT NULL IDENTITY(1,1) primary key
 	,PetName			varchar(50)		NOT NULL
 	,PetType			varchar(50)		NOT NULL
 	,PetBreed			varchar(50)		NOT NULL
-	,PetDOB				datetime
+	,PetDOB				datetime2
 	,PetWeight			float			NOT NULL
 	,OwnerId			int				NOT NULL
 
