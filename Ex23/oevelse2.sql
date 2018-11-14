@@ -6,8 +6,8 @@ DROP TABLE IF EXISTS PRODUCT
 
 CREATE TABLE INVOICE
 (
-	InvoiceNumber		int				primary key
-	,InvoiceDate		datetime		NOT NULL
+	InvoiceNumber		int				IDENTITY(1,1) primary key
+	,InvoiceDate		datetime2		NOT NULL
 	,SubTotal			float			NOT NULL
 	,TaxPct				float			NOT NULL
 	,Total				float			NOT NULL
@@ -15,7 +15,7 @@ CREATE TABLE INVOICE
 
 CREATE TABLE PRODUCT
 (
-	ProductNumber		int				primary key
+	ProductNumber		int				IDENTITY(1,1) primary key
 	,ProductType		varchar(50)		NOT NULL
 	,ProductDescription	varchar(100)	NOT NULL
 	,UnitPrice			float			NOT NULL
