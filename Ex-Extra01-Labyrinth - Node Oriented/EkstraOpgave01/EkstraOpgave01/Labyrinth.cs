@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -33,6 +34,45 @@ namespace EkstraOpgave01
                     Grid[x, y] = node;
                     node.X = x;
                     node.Y = y;
+                }
+            }
+
+            for (int y = 0; y < Grid.GetLength(1); y++)
+            {
+                for (int x = 0; x < Grid.GetLength(0); x++)
+                {
+                    Node node = Grid[x, y];
+                    SetNeighbours(node);
+                }
+            }
+        }
+
+        private void SetNeighbours(Node node)
+        {
+            for (int y = -1; y <= 1; y++)
+            {
+                for (int x = -1; x <= 1; x++)
+                {
+                    int xCoords = node.X + x;
+                    int yCoords = node.Y + y;
+                    try
+                    {
+                        if (x == 0 && y == 0) // Center
+                        {
+                            continue;
+                        }
+                        else if (Math.Abs(x) == Math.Abs(y)) // Corner
+                        {
+                            continue;
+                        }
+                        else // Side
+                        {
+                            node.neighbours.Add(Grid[xCoords, yCoords]);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
             }
         }
