@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Logic.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="dbserver" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EALSQL1.eal.local</Value>
+    </Setting>
+    <Setting Name="dbname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">B_DB17_2018</Value>
+    </Setting>
+    <Setting Name="dbuser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">B_STUDENT17</Value>
+    </Setting>
+    <Setting Name="dbpassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">B_OPENDB17</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
