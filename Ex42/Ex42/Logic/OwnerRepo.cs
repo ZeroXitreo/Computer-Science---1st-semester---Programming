@@ -14,7 +14,7 @@ namespace Logic
 
         public Owner FindOwnerByLastname(string lastName)
         {
-            using (SqlConnection connection = DB.Connection)
+            using (SqlConnection connection = new SqlConnection(DB.connectionString))
             {
                 connection.Open();
 
@@ -45,13 +45,13 @@ namespace Logic
 
         public Owner FindOwnerByEmail(string firstName, string email)
         {
-            using (SqlConnection connection = DB.Connection)
+            using (SqlConnection connection = new SqlConnection(DB.connectionString))
             {
                 connection.Open();
 
-                SqlCommand cmd = new SqlCommand("GetOwnersByEmail", connection);
+                SqlCommand cmd = new SqlCommand("GetOwnerByEmail", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@OwnerFirstName", firstName));
+                cmd.Parameters.Add(new SqlParameter("@FirstName", firstName));
                 cmd.Parameters.Add(new SqlParameter("@Email", email));
 
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -77,7 +77,7 @@ namespace Logic
 
         public void InsertPetOwner(string lastName, string firstName, string phoneNumber, string email)
         {
-            using (SqlConnection connection = DB.Connection)
+            using (SqlConnection connection = new SqlConnection(DB.connectionString))
             {
                 connection.Open();
 

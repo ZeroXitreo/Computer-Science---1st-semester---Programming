@@ -14,7 +14,7 @@ namespace Logic
 
         public void InsertPet(string name, string type, string breed, string weight, string ownerId)
         {
-            using (SqlConnection connection = DB.Connection)
+            using (SqlConnection connection = new SqlConnection(DB.connectionString))
             {
                 connection.Open();
 
@@ -34,7 +34,7 @@ namespace Logic
         {
             List<Pet> pets = new List<Pet>();
 
-            using (SqlConnection connection = DB.Connection)
+            using (SqlConnection connection = new SqlConnection(DB.connectionString))
             {
                 connection.Open();
                 SqlCommand cmd = new SqlCommand("GetPets", connection);
