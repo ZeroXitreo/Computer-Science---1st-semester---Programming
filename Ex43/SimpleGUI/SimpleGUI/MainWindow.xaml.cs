@@ -23,10 +23,10 @@ namespace SimpleGUI
         public MainWindow()
         {
             InitializeComponent();
-            TextBoxes.Children.Add(CreateTextBox("Textbox " + (TextBoxes.Children.Count + 1)));
-            TextBoxes.Children.Add(CreateTextBox("Textbox " + (TextBoxes.Children.Count + 1)));
-            TextBoxes.Children.Add(CreateTextBox("Textbox " + (TextBoxes.Children.Count + 1)));
-            TextBoxes.Children.Add(CreateTextBox("Textbox " + (TextBoxes.Children.Count + 1)));
+            AddTextBox();
+            AddTextBox();
+            AddTextBox();
+            AddTextBox();
         }
 
         public TextBox CreateTextBox(string text)
@@ -96,6 +96,11 @@ namespace SimpleGUI
         }
 
         private void AddTextBox(object sender, RoutedEventArgs e)
+        {
+            AddTextBox();
+        }
+
+        private void AddTextBox()
         {
             TextBoxes.Children.Add(CreateTextBox("Textbox " + (TextBoxes.Children.Count + 1)));
         }
