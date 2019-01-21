@@ -12,13 +12,10 @@
                 <Button Content="Scroll up" Width="100" Margin="0,0,0,10" Click="ScrollUp"/>
                 <Button Content="Clear" Width="100" Margin="0,0,0,10" Click="Clear"/>
                 <Button Content="Scoll down" Width="100" Margin="0,0,0,10" Click="ScrollDown"/>
+                <Button Content="Add text box" Width="100" Margin="0,0,0,10" Click="AddTextBox"/>
+                <Button Content="Remove text box" Width="100" Margin="0,0,0,10" Click="RemoveTextBox"/>
             </StackPanel>
-            <StackPanel VerticalAlignment="Center" Margin="0,0,0,-10">
-                <TextBox x:Name="TextBox1" Height="23" TextWrapping="Wrap" Text="TextBox 1" Margin="0,0,0,10"/>
-                <TextBox x:Name="TextBox2" Height="23" TextWrapping="Wrap" Text="TextBox 2" Margin="0,0,0,10"/>
-                <TextBox x:Name="TextBox3" Height="23" TextWrapping="Wrap" Text="TextBox 3" Margin="0,0,0,10"/>
-                <TextBox x:Name="TextBox4" Height="23" TextWrapping="Wrap" Text="TextBox 4" Margin="0,0,0,10"/>
-            </StackPanel>
+            <StackPanel x:Name="TextBoxes" VerticalAlignment="Center" Margin="0,0,0,-10" />
         </DockPanel>
 
     </Grid>

@@ -23,34 +23,86 @@ namespace SimpleGUI
         public MainWindow()
         {
             InitializeComponent();
+            TextBoxes.Children.Add(CreateTextBox("Textbox " + (TextBoxes.Children.Count + 1)));
+            TextBoxes.Children.Add(CreateTextBox("Textbox " + (TextBoxes.Children.Count + 1)));
+            TextBoxes.Children.Add(CreateTextBox("Textbox " + (TextBoxes.Children.Count + 1)));
+            TextBoxes.Children.Add(CreateTextBox("Textbox " + (TextBoxes.Children.Count + 1)));
+        }
+
+        public TextBox CreateTextBox(string text)
+        {
+            Thickness thick = new Thickness
+            {
+                Bottom = 10
+            };
+
+            TextBox txtbx = new TextBox
+            {
+                Height = 23,
+                TextWrapping = TextWrapping.Wrap,
+                Margin = thick,
+                Text = text
+            };
+
+            return txtbx;
         }
 
         private void Clear(object sender, RoutedEventArgs e)
         {
-            TextBox1.Clear();
-            TextBox2.Clear();
-            TextBox3.Clear();
-            TextBox4.Clear();
+            foreach (TextBox txtBx in TextBoxes.Children)
+            {
+                txtBx.Clear();
+            }
         }
 
         private void ScrollDown(object sender, RoutedEventArgs e)
         {
-            string tb4 = TextBox4.Text;
+            string lastTbTxt = ((TextBox)TextBoxes.Children[TextBoxes.Children.Count - 1]).Text;
 
-            TextBox4.Text = TextBox3.Text;
-            TextBox3.Text = TextBox2.Text;
-            TextBox2.Text = TextBox1.Text;
-            TextBox1.Text = tb4;
+            for (int i = TextBoxes.Children.Count - 1; i >= 0; i--)
+            {
+                TextBox txtBx = (TextBox)TextBoxes.Children[i];
+
+                if (i == 0)
+                {
+                    txtBx.Text = lastTbTxt;
+                    return;
+                }
+
+                TextBox txtBxNext = (TextBox)TextBoxes.Children[i - 1];
+
+                txtBx.Text = txtBxNext.Text;
+            }
         }
 
         private void ScrollUp(object sender, RoutedEventArgs e)
         {
-            string tb1 = TextBox1.Text;
+            string lastTbTxt = ((TextBox)TextBoxes.Children[0]).Text;
 
-            TextBox1.Text = TextBox2.Text;
-            TextBox2.Text = TextBox3.Text;
-            TextBox3.Text = TextBox4.Text;
-            TextBox4.Text = tb1;
+            for (int i = 0; i < TextBoxes.Children.Count; i++)
+            {
+                TextBox txtBx = (TextBox)TextBoxes.Children[i];
+
+                if (i == TextBoxes.Children.Count - 1)
+                {
+                    txtBx.Text = lastTbTxt;
+                    return;
+                }
+
+                TextBox txtBxNext = (TextBox)TextBoxes.Children[i + 1];
+
+                txtBx.Text = txtBxNext.Text;
+            }
+        }
+
+        private void AddTextBox(object sender, RoutedEventArgs e)
+        {
+            TextBoxes.Children.Add(CreateTextBox("Textbox " + (TextBoxes.Children.Count + 1)));
+        }
+
+        private void RemoveTextBox(object sender, RoutedEventArgs e)
+        {
+            TextBoxes.Children.Remove(TextBoxes.Children[TextBoxes.Children.Count - 1]);
         }
     }
 }
