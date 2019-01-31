@@ -2,28 +2,37 @@
 
 namespace oevelse_3
 {
-    internal class GasStation : IObserver
+    internal class GasStation : Subject, IObserver
     {
-        private RegionType region;
-        private GasCompany gasCompany;
+        private bool discount;
+        public GasCompany GasCompany { get; private set; }
 
         public GasStation(RegionType region, string city)
         {
-            this.region = region;
+            Region = region;
             City = city;
         }
 
-        public object City { get; internal set; }
-        public bool Discount { get; internal set; }
+        public RegionType Region { get; private set; }
+        public string City { get; private set; }
+        public bool Discount
+        {
+            get
+            {
+                return discount;
+            }
+            set
+            {
+                discount = value;
+                Notify();
+            }
+        }
 
         public void Update(Subject subject)
         {
-            Update((GasCompany)subject);
-        }
+            GasCompany = (GasCompany)subject;
 
-        public void Update(GasCompany gasCompany)
-        {
-            this.gasCompany = gasCompany;
+            Notify();
         }
     }
 }

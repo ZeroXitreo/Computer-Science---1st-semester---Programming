@@ -13,6 +13,7 @@ namespace oevelse_3
         public void Attach(IObserver observer)
         {
             observers.Add(observer);
+            observer.Update(this);
         }
 
         public void Detach(IObserver observer)

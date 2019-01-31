@@ -8,8 +8,8 @@ namespace oevelse_3
 {
     public enum FuelType
     {
+        HydroOxygen = 110,
         KeroOxygen = 100,
-        AlcoOxygen = 90,
-        HydroOxygen = 110
+        AlcoOxygen = 90
     };
 }
