@@ -4,16 +4,11 @@ namespace BadCode
 {
     public class Menu
     {
-        private Controller controller = null;
-
-        public Menu()
-        {
-            controller = new Controller();
-        }
+        private readonly Controller controller = new Controller();
 
         public void RunMenu()
         {
-            string tournamentName = null;
+            string tournamentName;
             bool running = true;
             do
             {

@@ -4,17 +4,18 @@ namespace BadCode
 {
     public class Round
     {
-        private List<Match> matches = new List<Match>();
+        public readonly List<Match> matches = new List<Match>();
+
         public Team FreeRider { get; set; }
         public List<Team> WinningTeams
         {
             get
             {
                 List<Team> winningTeams = new List<Team>();
-                foreach (Match m in matches)
+                foreach (Match match in matches)
                 {
-                    if (m.Winner != null)
-                        winningTeams.Add(m.Winner);
+                    if (match.Winner != null)
+                        winningTeams.Add(match.Winner);
                 }
                 return winningTeams;
             }
@@ -25,23 +26,27 @@ namespace BadCode
             get
             {
                 List<Team> losingTeams = new List<Team>();
-                foreach (Match m in matches)
+                foreach (Match match in matches)
                 {
-                    if (m.Winner != null)
+                    if (match.Winner != null)
                     {
-                        if (m.Winner == m.FirstOpponent)
-                            losingTeams.Add(m.SecondOpponent);
+                        if (match.Winner == match.FirstOpponent)
+                        {
+                            losingTeams.Add(match.SecondOpponent);
+                        }
                         else
-                            losingTeams.Add(m.FirstOpponent);
+                        {
+                            losingTeams.Add(match.FirstOpponent);
+                        }
                     }
                 }
                 return losingTeams;
             }
         }
 
-        public void AddMatch(Match m)
+        public void AddMatch(Match match)
         {
-            matches.Add(m);
+            matches.Add(match);
         }
 
         public int GetNumberOfMatches()
@@ -51,39 +56,14 @@ namespace BadCode
 
         public Match GetMatch(Team team1, Team team2)
         {
-            Match foundMatch = null;
-            int idx = 0;
-            while ((foundMatch == null) && (idx < matches.Count))
+            foreach (Match match in matches)
             {
-                Match match = matches[idx];
                 if (match.FirstOpponent.Name.Equals(team1.Name) && match.SecondOpponent.Name.Equals(team2.Name))
                 {
-                    foundMatch = match;
+                    return match;
                 }
-                idx++;
             }
-            return foundMatch;
-        }
-
-        public Match GetMatch(string teamName1, string teamName2)
-        {
-            Match foundMatch = null;
-            int idx = 0;
-            while ((foundMatch == null) && (idx < matches.Count))
-            {
-                Match match = matches[idx];
-                if (match.FirstOpponent.Name.Equals(teamName1) && match.SecondOpponent.Name.Equals(teamName2))
-                {
-                    foundMatch = match;
-                }
-                idx++;
-            }
-            return foundMatch;
-        }
-
-        public List<Match> GetAllMatches()
-        {
-            return matches;
+            return null;
         }
 
         public bool IsRoundFinished()
@@ -92,7 +72,7 @@ namespace BadCode
             int idx = 0;
             while ((idx < matches.Count) && allMatchesGotWinner)
             {
-                allMatchesGotWinner = (matches[idx].Winner != null);
+                allMatchesGotWinner = matches[idx].Winner != null;
                 idx++;
             }
             return allMatchesGotWinner;

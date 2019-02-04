@@ -215,9 +215,11 @@ namespace BadCode
                 int noOfMatches = teams.Count / 2;
                 for (int i = 0; i < noOfMatches; i++)
                 {
-                    Match newMatch = new Match();
-                    newMatch.FirstOpponent = teams[randomIndices[2 * i]];
-                    newMatch.SecondOpponent = teams[randomIndices[2 * i + 1]];
+                    Match newMatch = new Match
+                    {
+                        FirstOpponent = teams[randomIndices[2 * i]],
+                        SecondOpponent = teams[randomIndices[2 * i + 1]]
+                    };
                     newRound.AddMatch(newMatch);
                 }
                 selectedTournament.AddRound(newRound);
@@ -226,7 +228,7 @@ namespace BadCode
                 Console.WriteLine("        Liga: " + tournamentName);
                 Console.WriteLine("          Runde " + numberOfRounds);
                 Console.WriteLine("-----------------------------------------");
-                foreach (Match m in newRound.GetAllMatches())
+                foreach (Match m in newRound.matches)
                 {
                     string first = PadSpaceToName(m.FirstOpponent.Name, 10);
                     string second = m.SecondOpponent.Name;
@@ -251,7 +253,7 @@ namespace BadCode
             Tournament tournament = tournamentRepository.GetByName(tournamentName);
             Round selectedRound = tournament.GetRound(roundNumber);
             Team winner = tournament.GetTeam(winningTeam);
-            Match m = selectedRound.GetMatch(team1, team2);
+            Match m = selectedRound.GetMatch(tournament.GetTeam(team1), tournament.GetTeam(team2));
             m.Winner = tournament.GetTeam(winningTeam);
         }
 
