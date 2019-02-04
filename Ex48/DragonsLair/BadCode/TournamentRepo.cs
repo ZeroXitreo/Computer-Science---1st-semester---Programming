@@ -2,34 +2,25 @@
 
 namespace BadCode
 {
-    class TournamentRepo
+    class TournamentRepo : IRepository<Tournament>
     {
-        private List<Tournament> t = new List<Tournament>();
+        private List<Tournament> tournaments = new List<Tournament>();
 
-        public void RegisterTournament(string name)
+        public void Insert(Tournament tournament)
         {
-            Tournament newTournament = new Tournament(name);
-            RegisterTournament(newTournament);
+            tournaments.Add(tournament);
         }
 
-        public void RegisterTournament(Tournament tournament)
+        public Tournament GetByName(string name)
         {
-            t.Add(tournament);
-        }
-
-        public Tournament GetTournament(string x)
-        {
-            Tournament y = null;
-            int idx = 0;
-            while((y == null) && (idx < t.Count))
+            foreach (Tournament tournament in tournaments)
             {
-                if (t[idx].Name.Equals(x))
+                if (tournament.Name == name)
                 {
-                    y = t[idx];
+                    return tournament;
                 }
-                idx++;
             }
-            return y;
+            return null;
         }
     }
 }

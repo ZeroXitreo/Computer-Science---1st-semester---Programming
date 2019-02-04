@@ -1,12 +1,12 @@
 ﻿namespace BadCode
 {
-    public class Player
+    public class Player : IEntity
     {
-        public string Name { get; set; }
-        public string Address { get; set; }
-        public string Email { get; set; }
-        public string Telephone { get; set; }
-        
+        public string Name { get; }
+        public string Address { get; }
+        public string Email { get; }
+        public string Telephone { get; }
+
         public Player(string name, string address = null, string email = null, string telephone = null)
         {
             Name = name;

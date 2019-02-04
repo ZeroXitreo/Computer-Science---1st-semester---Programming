@@ -6,8 +6,10 @@ namespace BadCode
     {
         private List<Match> matches = new List<Match>();
         public Team FreeRider { get; set; }
-        public List<Team> WinningTeams {
-            get {
+        public List<Team> WinningTeams
+        {
+            get
+            {
                 List<Team> winningTeams = new List<Team>();
                 foreach (Match m in matches)
                 {
@@ -17,8 +19,11 @@ namespace BadCode
                 return winningTeams;
             }
         }
-        public List<Team> LosingTeams {
-            get {
+
+        public List<Team> LosingTeams
+        {
+            get
+            {
                 List<Team> losingTeams = new List<Team>();
                 foreach (Match m in matches)
                 {
@@ -85,7 +90,7 @@ namespace BadCode
         {
             bool allMatchesGotWinner = true;
             int idx = 0;
-            while((idx < matches.Count) && allMatchesGotWinner)
+            while ((idx < matches.Count) && allMatchesGotWinner)
             {
                 allMatchesGotWinner = (matches[idx].Winner != null);
                 idx++;

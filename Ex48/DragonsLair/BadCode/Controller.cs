@@ -19,42 +19,42 @@ namespace BadCode
             TeamRepo teamRepository = new TeamRepo();
             PlayerRepo playerRepository = new PlayerRepo();
             string tournamentName = "X";
-            Tournament tournament = new Tournament(tournamentName);
 
             Console.WriteLine("Registrerer spillere...");
-            playerRepository.RegisterPlayer("Laust Ulriksen");
-            playerRepository.RegisterPlayer("Matthias Therkelsen", null, "matthias@therkelsen.dk", "+45 47002155");
-            playerRepository.RegisterPlayer("Martin Bertelsen", "Nyborgvej 10, Odense", null, "+45 22521112");
-            playerRepository.RegisterPlayer("Line Madsen", "Kochsgade 21, Odense", "linem@msn.dk", "+45 00142563");
-            playerRepository.RegisterPlayer(new Player("Jette Detlevsen"));
+            playerRepository.Insert(new Player("Laust Ulriksen"));
+            playerRepository.Insert(new Player("Matthias Therkelsen", null, "matthias@therkelsen.dk", "+45 47002155"));
+            playerRepository.Insert(new Player("Martin Bertelsen", "Nyborgvej 10, Odense", null, "+45 22521112"));
+            playerRepository.Insert(new Player("Line Madsen", "Kochsgade 21, Odense", "linem@msn.dk", "+45 00142563"));
+            playerRepository.Insert(new Player("Jette Detlevsen"));
 
             Console.WriteLine("Registrerer teams...");
             // initialize with a default set of teams
-            teamRepository.RegisterTeam("A");
-            teamRepository.RegisterTeam("B");
-            teamRepository.RegisterTeam("C");
-            teamRepository.RegisterTeam("D");
-            teamRepository.RegisterTeam("E");
+            teamRepository.Insert(new Team("A"));
+            teamRepository.Insert(new Team("B"));
+            teamRepository.Insert(new Team("C"));
+            teamRepository.Insert(new Team("D"));
+            teamRepository.Insert(new Team("E"));
             Console.WriteLine("Tilføjer spillere til teams...");
             // Add players to teams
-            Team FCK = teamRepository.GetTeam("A");
-            FCK.AddPlayer(playerRepository.GetPlayer("Laust Ulriksen"));
-            Team OB = teamRepository.GetTeam("B");
-            FCK.AddPlayer(playerRepository.GetPlayer("Matthias Therkelsen"));
-            Team BiF = teamRepository.GetTeam("C");
-            BiF.AddPlayer(playerRepository.GetPlayer("Martin Bertelsen"));
-            Team Hobro = teamRepository.GetTeam("D");
-            Hobro.AddPlayer(playerRepository.GetPlayer("Line Madsen"));
-            Team AGF = teamRepository.GetTeam("E");
-            AGF.AddPlayer(playerRepository.GetPlayer("Jette Detlevsen"));
+            Team FCK = teamRepository.GetByName("A");
+            FCK.AddPlayer(playerRepository.GetByName("Laust Ulriksen"));
+            FCK.AddPlayer(playerRepository.GetByName("Matthias Therkelsen"));
+            Team OB = teamRepository.GetByName("B");
+            Team BiF = teamRepository.GetByName("C");
+            BiF.AddPlayer(playerRepository.GetByName("Martin Bertelsen"));
+            Team Hobro = teamRepository.GetByName("D");
+            Hobro.AddPlayer(playerRepository.GetByName("Line Madsen"));
+            Team AGF = teamRepository.GetByName("E");
+            AGF.AddPlayer(playerRepository.GetByName("Jette Detlevsen"));
 
             Console.WriteLine("Registrerer Liga...");
             // initialize with a default tournament
-            tournamentRepository.RegisterTournament(tournament);
+            tournamentRepository.Insert(new Tournament(tournamentName));
+            Tournament tournament = tournamentRepository.GetByName(tournamentName);
 
             Console.WriteLine("Tilføjer teams til Liga...");
             // Add teams to tournament
-            tournament = tournamentRepository.GetTournament(tournamentName);
+            tournament = tournamentRepository.GetByName(tournamentName);
             tournament.AddTeam(FCK);
             tournament.AddTeam(OB);
             tournament.AddTeam(BiF);
@@ -92,7 +92,7 @@ namespace BadCode
         {
             Dictionary<string, int> teamNameToScore = new Dictionary<string, int>();
 
-            Tournament selectedTournament = tournamentRepository.GetTournament(tournamentName);
+            Tournament selectedTournament = tournamentRepository.GetByName(tournamentName);
             int numberOfRounds = selectedTournament.GetNumberOfRounds();
             if (numberOfRounds > 0)
             {
@@ -145,7 +145,7 @@ namespace BadCode
 
         public void ScheduleNewRound(string tournamentName)
         {
-            Tournament selectedTournament = tournamentRepository.GetTournament(tournamentName);
+            Tournament selectedTournament = tournamentRepository.GetByName(tournamentName);
             List<Team> teams = null;
             Round thisRound = null;
 
@@ -248,7 +248,7 @@ namespace BadCode
 
         public void SaveMatch(string tournamentName, int roundNumber, string team1, string team2, string winningTeam)
         {
-            Tournament tournament = tournamentRepository.GetTournament(tournamentName);
+            Tournament tournament = tournamentRepository.GetByName(tournamentName);
             Round selectedRound = tournament.GetRound(roundNumber);
             Team winner = tournament.GetTeam(winningTeam);
             Match m = selectedRound.GetMatch(team1, team2);
@@ -257,7 +257,7 @@ namespace BadCode
 
         public Tournament GetTournament(string name)
         {
-            return tournamentRepository.GetTournament(name);
+            return tournamentRepository.GetByName(name);
         }
     }
 }

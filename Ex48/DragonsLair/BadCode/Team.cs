@@ -2,14 +2,14 @@
 
 namespace BadCode
 {
-    public class Team
+    public class Team : IEntity
     {
         public string Name { get; set; }
         private List<Player> players = new List<Player>();
 
-        public Team(string teamName)
+        public Team(string name)
         {
-            Name = teamName;
+            Name = name;
         }
 
         public void AddPlayer(Player player)

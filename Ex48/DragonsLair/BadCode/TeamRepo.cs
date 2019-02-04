@@ -2,39 +2,25 @@
 
 namespace BadCode
 {
-    public class TeamRepo
+    public class TeamRepo : IRepository<Team>
     {
-        private List<Team> teams = new List<Team>();
-        
-        public void RegisterTeam(Team team)
+        public readonly List<Team> Teams = new List<Team>();
+
+        public void Insert(Team team)
         {
-            teams.Add(team);
+            Teams.Add(team);
         }
 
-        public void RegisterTeam(string name)
+        public Team GetByName(string name)
         {
-            Team newTeam = new Team(name);
-            teams.Add(newTeam);
-        }
-
-        public Team GetTeam(string name)
-        {
-            Team team = null;
-            int idx = 0;
-            while ((team == null) && (idx < teams.Count))
+            foreach (Team team in Teams)
             {
-                if (teams[idx].Name.Equals(name))
+                if (team.Name == name)
                 {
-                    team = teams[idx];
+                    return team;
                 }
-                idx++;
             }
-            return team;
-        }
-
-        public List<Team> Teams()
-        {
-            return teams;
+            return null;
         }
     }
 }
