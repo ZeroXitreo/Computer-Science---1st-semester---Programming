@@ -46,6 +46,7 @@
     <Compile Include="Academy.cs" />
     <Compile Include="IAcademy.cs" />
     <Compile Include="IStudent.cs" />
+    <Compile Include="NotifyHandler.cs" />
     <Compile Include="Organization.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
