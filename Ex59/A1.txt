@@ -1,0 +1,18 @@
+1.;
+	delegate bool Contains(int n);
+	delegate bool Check();
+	delegate double Calculate(string expression);
+	delegate int CompareTo(int comparable);
+	delegate int Area(int height, int width);
+	delegate string Retrieve();
+	delegate void Delete(int n);
+	delegate void Send(string s);
+2.;
+	Predicate<int> Contains;
+	Func<bool> Check;
+	Func<string, double> Calculate;
+	Func<int, int> CompareTo;
+	Func<int, int, int> Area;
+	Func<string> Retrieve;
+	Action<int> Delete;
+	Action<string> Send;
